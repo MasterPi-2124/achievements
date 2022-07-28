@@ -21,3 +21,5 @@ if [ "$REPO_CREATED" = "false" ]; then
 else
   cd container/$REPO_NAME
 fi
+
+echo $REPO_NAME
