@@ -5,7 +5,7 @@ cp .env.default .env
 export $(cat .env | sed 's/#.*//g'| xargs)
 
 if [ "$REPO_CREATED" = "false" ]; then
-  sed -i '' -e "s/REPO_CREATED=.*/REPO_CREATED=true/" .env
+  sed -i "s/REPO_CREATED=false/REPO_CREATED=true/g" .env
   mkdir ../container
   cd ../container
   gh repo create $REPONAME --private --clone
