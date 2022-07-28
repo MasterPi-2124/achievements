@@ -16,8 +16,6 @@ if [ "$REPO_CREATED" = "false" ]; then
   cd container
   gh repo create $REPO_NAME --private --clone
   cd $REPO_NAME
-  git init
-  git checkout -B main
 else
   cd container/$REPO_NAME
 fi
