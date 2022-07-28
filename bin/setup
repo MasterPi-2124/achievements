@@ -9,6 +9,7 @@ export $(cat .env | sed 's/#.*//g'| xargs)
 
 if [ ! -d "container" ]; then
   mkdir container
+fi
 
 if [ "$REPO_CREATED" = "false" ]; then
   sed -i "s/REPO_CREATED=false/REPO_CREATED=true/g" .env
