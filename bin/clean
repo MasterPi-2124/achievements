@@ -1,7 +1,9 @@
 #!/bin/bash
 set -e # Stop on errors
 
+export $(cat .env | sed 's/#.*//g'| xargs)
+
 echo $REPO_NAME
-# rm -rf container/$REPO_NAME
+rm -rf container/$REPO_NAME
 #gh auth refresh -h github.com -s delete_repo
-# gh repo delete --confirm $REPO_NAME
+gh repo delete --confirm $REPO_NAME
