@@ -5,6 +5,5 @@ export $(cat .env | sed 's/#.*//g'| xargs)
 
 echo $REPO_NAME
 rm -rf container/$REPO_NAME
-#gh auth refresh -h github.com -s delete_repo
 gh repo delete --confirm $REPO_NAME
 sed -i "s/REPO_CREATED=true/REPO_CREATED=false/g" .env
