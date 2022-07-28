@@ -1,20 +1,19 @@
 #!/bin/bash
 set -e # Stop on errors
 
-sh bin/setup
+bash bin/setup
 
 BRANCH_NAME="pair-extraordinaire"
 
 git checkout -B $BRANCH_NAME
 
-for i in {0..120}
+for i in {0..20}
 do
   git commit --allow-empty -m $'An empty commit.\n\nCo-authored-by: Nathaniel Pendy <n@thaniel.dev>'
 done
 
 git push -u origin $BRANCH_NAME
-
 gh pr create -f
 gh pr merge --merge --delete-branch
 
-sh bin/teardown
+bash bin/teardown

@@ -10,7 +10,6 @@ do
   git checkout -B $BRANCH_NAME
   git commit --allow-empty -m "A commit message."
   git push -u origin $BRANCH_NAME
-
   gh pr create -f
   gh pr merge --merge --delete-branch
 
