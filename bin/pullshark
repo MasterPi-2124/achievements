@@ -14,7 +14,7 @@ do
   gh pr create -f
   gh pr merge --merge --delete-branch
 
-  sleep 30
+  sleep 20
 done
 
 bash bin/teardown
