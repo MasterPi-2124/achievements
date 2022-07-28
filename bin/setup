@@ -1,0 +1,17 @@
+#!/bin/sh -e
+
+export $(cat .env | sed 's/#.*//g'| xargs)
+
+if [ "$REPO_CREATED" = "false" ]; then
+  sed -i '' -e "s/REPO_CREATED=.*/REPO_CREATED=true/" .env
+  mkdir ../container
+  cd ../container
+  gh repo create $REPONAME --private --clone
+  
+  cd $REPONAME
+  git init
+  git checkout -B main
+else 
+  cd ../$REPONAME
+fi
+
