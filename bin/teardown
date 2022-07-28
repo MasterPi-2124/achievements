@@ -1,7 +1,0 @@
-#!/bin/bash
-set -e # Stop on errors
-
-
-rm -rf container/$REPONAME
-#gh auth refresh -h github.com -s delete_repo
-gh repo delete --confirm $REPONAME

@@ -4,23 +4,18 @@ set -e # Stop on errors
 if [ ! -f ".env" ]; then
   cp .env.default .env
 fi
-cat .env
+
 export $(cat .env | sed 's/#.*//g'| xargs)
 
 if [ ! -d "container" ]; then
   mkdir container
-fi
-
-cd container
 
 if [ "$REPO_CREATED" = "false" ]; then
   sed -i "s/REPO_CREATED=false/REPO_CREATED=true/g" .env
-  gh repo create $REPONAME --private --clone
-
-  cd $REPONAME
+  gh repo create $REPO_NAME --private --clone
+  cd container/$REPO_NAME
   git init
   git checkout -B main
 else
-  cd $REPONAME
+  cd container/$REPO_NAME
 fi
-
