@@ -3,11 +3,11 @@ set -e # Stop on errors
 
 sh bin/setup
 
-BRANCHNAME="quickdraw"
+BRANCH_NAME="quickdraw"
 
-git checkout -B $BRANCHNAME
+git checkout -B $BRANCH_NAME
 git commit --allow-empty -m "A commit message."
-git push -u origin $BRANCHNAME
+git push -u origin $BRANCH_NAME
 
 gh pr create -f
 gh pr merge --merge --delete-branch

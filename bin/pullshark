@@ -1,20 +1,20 @@
 #!/bin/bash
 set -e # Stop on errors
 
-sh bin/setup
+bash bin/setup
 
-BRANCHNAME="pullshark"
+BRANCH_NAME="pullshark"
 
 for i in {0..1024}
 do
-  git checkout -B $BRANCHNAME
+  git checkout -B $BRANCH_NAME
   git commit --allow-empty -m "A commit message."
-  git push -u origin $BRANCHNAME
+  git push -u origin $BRANCH_NAME
 
   gh pr create -f
   gh pr merge --merge --delete-branch
 
-  sleep 60
+  sleep 30
 done
 
-sh bin/teardown
+bash bin/teardown
