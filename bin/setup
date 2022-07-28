@@ -4,7 +4,7 @@ set -e # Stop on errors
 if [ ! -f ".env" ]; then
   cp .env.default .env
 fi
-
+cat .env
 export $(cat .env | sed 's/#.*//g'| xargs)
 
 if [ ! -d "container" ]; then
