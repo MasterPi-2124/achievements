@@ -16,4 +16,4 @@ do
   sleep 20
 done
 
-bash bin/teardown
+bash bin/clean
