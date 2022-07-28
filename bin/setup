@@ -1,5 +1,7 @@
 #!/bin/sh -e
 
+cp .env.default .env
+
 export $(cat .env | sed 's/#.*//g'| xargs)
 
 if [ "$REPO_CREATED" = "false" ]; then
