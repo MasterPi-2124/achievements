@@ -13,8 +13,9 @@ fi
 
 if [ "$REPO_CREATED" = "false" ]; then
   sed -i "s/REPO_CREATED=false/REPO_CREATED=true/g" .env
+  cd container
   gh repo create $REPO_NAME --private --clone
-  cd container/$REPO_NAME
+  cd $REPO_NAME
   git init
   git checkout -B main
 else
