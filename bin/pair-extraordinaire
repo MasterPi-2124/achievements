@@ -5,11 +5,11 @@ bash bin/setup
 
 BRANCH_NAME="pair-extraordinaire"
 
-printf "Enter 1st author name here by format: Name Here <their@email.here>"
+printf "Enter 1st author name here by format: Name Here <their@email.here>\n> "
 read first
-printf "Enter 2nd author name here by format: Name Here <their@email.here>"
+printf "Enter 2nd author name here by format: Name Here <their@email.here>\n> "
 read second
-printf "Enter 3rd author name here by format: Name Here <their@email.here>"
+printf "Enter 3rd author name here by format: Name Here <their@email.here>\n> "
 read third
 
 for i in {0..48}
