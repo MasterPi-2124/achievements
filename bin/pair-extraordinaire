@@ -15,7 +15,7 @@ read third
 for i in {0..48}
 do
   git checkout -B $BRANCH_NAME
-  message = "An empty commit.\n\nCo-authored-by: $first\nCo-authored-by: $second\nCo-authored-by: $third"
+  message="An empty commit.\n\nCo-authored-by: $first\nCo-authored-by: $second\nCo-authored-by: $third"
   git commit --allow-empty -m $message
   git push -u origin $BRANCH_NAME
   gh pr create -f
