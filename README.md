@@ -14,5 +14,5 @@ Gain any individual achievement by running the name of that achievement directly
 
 Or, to gain all achievements, simply run `bash bin/all`
 
-| Warning: This process can take upwards of several hours in order to not result in a rate limit from the API. It is recommended to let this script run in the background. This is only for purpose of proving that github achievenemts is too easy to earn.|
+| Warning: This process can take upwards of several hours in order to not result in a rate limit from the API. It is recommended to let this script run in the background. This is only for purpose of proving that github achievenemts is quite pointless and too easy to earn.|
 | --- |
