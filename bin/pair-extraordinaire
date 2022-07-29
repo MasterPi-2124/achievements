@@ -9,8 +9,6 @@ printf "Enter 1st author name here by format: Name Here <their@email.here>\n> "
 read first
 printf "Enter 2nd author name here by format: Name Here <their@email.here>\n> "
 read second
-printf "Enter 3rd author name here by format: Name Here <their@email.here>\n> "
-read third
 
 for i in {0..48}
 do
@@ -18,8 +16,7 @@ do
   message="An empty commit.
 
   Co-authored-by: $first
-  Co-authored-by: $second
-  Co-authored-by: $third"
+  Co-authored-by: $second"
   
   git commit --allow-empty -m "$message"
   git push -u origin $BRANCH_NAME
