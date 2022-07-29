@@ -7,16 +7,16 @@ BRANCH_NAME="pair-extraordinaire"
 
 printf "Enter 1st author name here by format: Name Here <their@email.here>\n> "
 read first
-printf "Enter 2nd author name here by format: Name Here <their@email.here>\n> "
-read second
+# printf "Enter 2nd author name here by format: Name Here <their@email.here>\n> "
+# read second
 
 for i in {0..48}
 do
   git checkout -B $BRANCH_NAME
   message="An empty commit.
 
-  Co-authored-by: $first
-  Co-authored-by: $second"
+  Co-authored-by: $first"
+  # Co-authored-by: $second"
   
   git commit --allow-empty -m "$message"
   git push -u origin $BRANCH_NAME
