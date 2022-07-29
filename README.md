@@ -1,5 +1,5 @@
 # achievements
-A collection of shell scripts to achieve 100% of API-accessible Github achievements
+A collection of shell scripts to achieve 100% of API-accessible Github achievements. Link: https://github.com/Schweinepriester/github-profile-achievements
 
 ## Prerequisites
 - `gh` Github CLI Installed
