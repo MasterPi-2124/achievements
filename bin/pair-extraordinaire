@@ -5,20 +5,10 @@ bash bin/setup
 
 BRANCH_NAME="pair-extraordinaire"
 
-printf "Enter 1st author name here by format: Name Here <their@email.here>\n> "
-read first
-# printf "Enter 2nd author name here by format: Name Here <their@email.here>\n> "
-# read second
-
 for i in {0..48}
 do
   git checkout -B $BRANCH_NAME
-  message="An empty commit.
-
-  Co-authored-by: $first"
-  # Co-authored-by: $second"
-  
-  git commit --allow-empty -m "$message"
+  git commit --allow-empty -m $'An empty commit.\n\nCo-authored-by: Nathaniel Pendy <n@thaniel.dev>\nCo-authored-by: Dung M. Dao <dungdao3112000@gmail.com>'
   git push -u origin $BRANCH_NAME
   gh pr create -f
   gh pr merge --merge --delete-branch
