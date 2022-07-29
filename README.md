@@ -2,8 +2,8 @@
 A collection of shell scripts to achieve 100% of API-accessible Github achievements. Link: https://github.com/Schweinepriester/github-profile-achievements
 
 ## Prerequisites
-- `gh` Github CLI Installed
-- `gh auth login` Must be ran and completed successfully
+- `gh` Github CLI Installed.
+- `gh auth login` Must be ran and completed successfully.
 
 ## Instructions
 
